@@ -20,6 +20,16 @@ class ComposerStaticInit6c1e815842b7f390385cf358f00aedeb
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'H' => 
+        array (
+            'HelloWorld' => 
+            array (
+                0 => __DIR__ . '/..' . '/ehime/hello-world/src',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -29,6 +39,7 @@ class ComposerStaticInit6c1e815842b7f390385cf358f00aedeb
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit6c1e815842b7f390385cf358f00aedeb::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit6c1e815842b7f390385cf358f00aedeb::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit6c1e815842b7f390385cf358f00aedeb::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit6c1e815842b7f390385cf358f00aedeb::$classMap;
 
         }, null, ClassLoader::class);
